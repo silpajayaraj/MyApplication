@@ -15,7 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.user.myapplication.GraphActivity;
-import com.example.user.myapplication.sgfilter.SGFilter;
+//import com.example.user.myapplication.sgfilter.SGFilter;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -106,12 +106,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     }
 
     public void SGolayFilter() {
-        SGFilter filter = new SGFilter(5, 5);
-        double[] coefficients = SGFilter.computeSGCoefficients(5, 5, 4);
+      //  SGFilter filter = new SGFilter(5, 5);
+       // double[] coefficients = SGFilter.computeSGCoefficients(5, 5, 4);
         double array[] = new double[sensorXData.size()];
         for (int i = 0; i < sensorXData.size(); i++)
             array[i] = Double.parseDouble(Float.toString(sensorXData.get(0)));
-        filteredXData = filter.smooth(array, coefficients);
+      //  filteredXData = filter.smooth(array, coefficients);
     }
 }
 
